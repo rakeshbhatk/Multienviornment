@@ -23,7 +23,7 @@ pipeline {
 
           }
           steps {
-            sh 'Echo "Building on java 7  master node"'
+            bat 'echo "Building on Java7 master node"'
           }
         }
 
