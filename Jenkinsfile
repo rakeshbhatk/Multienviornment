@@ -28,9 +28,26 @@ sh ./jenkins/build.sh > Pipeline
       }
     }
 
-    stage('Test Step') {
-      steps {
-        unstash 'Java8'
+    stage('Java 8 Frontend test') {
+      parallel {
+        stage('Java 8 Frontend test') {
+          agent {
+            node {
+              label 'Java8'
+            }
+
+          }
+          steps {
+            unstash 'Java8'
+          }
+        }
+
+        stage('Java 7 Frontend test') {
+          steps {
+            unstash 'Java8'
+          }
+        }
+
       }
     }
 
