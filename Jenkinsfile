@@ -11,7 +11,7 @@ pipeline {
 
           }
           steps {
-            sh '''echo "build on Java8 enviornment - Centos"
+            sh '''echo "build on Java8 enviornment - Centos" > /tmp/Pipeline
 sh build.sh Rakesh Bhat'''
             stash(name: 'tmpPipeline', includes: 'tmpPipeline')
           }
