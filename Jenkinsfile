@@ -12,7 +12,7 @@ pipeline {
           }
           steps {
             sh '''echo "build on Java8 enviornment - Centos" > Pipeline
-sh build.sh
+sh ./jenkins/build.sh
 '''
             stash(name: 'tmpPipeline', includes: 'tmpPipeline')
           }
