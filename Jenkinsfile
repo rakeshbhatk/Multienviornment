@@ -11,10 +11,10 @@ pipeline {
 
           }
           steps {
-            sh '''echo "build on Java8 enviornment - Centos" > Pipeline
-sh ./jenkins/build.sh
+            sh '''echo "build on Java8 enviornment - Centos"
+sh ./jenkins/build.sh > Pipeline
 '''
-            stash(name: 'Stash', includes: 'Build')
+            stash(name: 'Stash', includes: 'Pipeline')
           }
         }
 
