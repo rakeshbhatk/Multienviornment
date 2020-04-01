@@ -16,12 +16,7 @@ pipeline {
         }
 
         stage('Java7') {
-          agent {
-            node {
-              label 'master'
-            }
-
-          }
+          agent any
           steps {
             sh 'echo "running on master building on java7"'
           }
