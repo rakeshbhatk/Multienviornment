@@ -30,7 +30,7 @@ sh ./jenkins/build.sh > Pipeline
 
     stage('Test Step') {
       steps {
-        unstash 'Pipeline'
+        unstash 'Java8'
       }
     }
 
