@@ -14,7 +14,7 @@ pipeline {
             sh '''echo "build on Java8 enviornment - Centos" > Pipeline
 sh ./jenkins/build.sh
 '''
-            stash(name: 'tmpPipeline', includes: 'tmpPipeline')
+            stash(name: 'File', includes: '*.sh')
           }
         }
 
