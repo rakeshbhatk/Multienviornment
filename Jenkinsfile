@@ -27,5 +27,11 @@ pwd'''
       }
     }
 
+    stage('Test Step') {
+      steps {
+        unstash 'tmpPipeline'
+      }
+    }
+
   }
 }
