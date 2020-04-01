@@ -15,6 +15,7 @@ pipeline {
 sh ./jenkins/build.sh > Pipeline
 '''
             stash(name: 'Java8', includes: 'Pipeline')
+            archiveArtifacts './jenkins/*.sh'
           }
         }
 
