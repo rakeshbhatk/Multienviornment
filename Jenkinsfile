@@ -13,6 +13,8 @@ pipeline {
           steps {
             sh '''echo "build on Java8 enviornment - Centos"
 sh ./jenkins/build.sh > Pipeline
+javac ./jenkins/build.java
+
 '''
             stash(name: 'Java8', includes: 'Pipeline')
             archiveArtifacts 'Pipeline'
