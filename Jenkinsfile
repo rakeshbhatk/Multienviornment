@@ -11,7 +11,8 @@ pipeline {
 
           }
           steps {
-            sh 'echo "build on Java8 enviornment - Centos" > \\tmp\\Pipeline'
+            sh '''echo "build on Java8 enviornment - Centos" > \\tmp\\Pipeline
+pwd'''
           }
         }
 
