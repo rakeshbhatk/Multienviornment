@@ -11,7 +11,8 @@ pipeline {
 
           }
           steps {
-            sh 'echo "build on Java8 enviornment - Centos"'
+            sh '''echo "build on Java8 enviornment - Centos"
+ls'''
           }
         }
 
