@@ -82,6 +82,19 @@ javac ./jenkins/build.java
           }
         }
 
+        stage('Java 8 performance test') {
+          agent {
+            node {
+              label 'Java8'
+            }
+
+          }
+          steps {
+            sh 'echo "running in centos7 java8 env"'
+            unstash 'Java8'
+          }
+        }
+
       }
     }
 
@@ -92,5 +105,4 @@ javac ./jenkins/build.java
     }
 
   }
- 
 }
