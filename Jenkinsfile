@@ -51,7 +51,7 @@ javac ./jenkins/build.java
               unstash 'Java8'
             }
 
-            sh 'java /Java8/jenkins/hello'
+            sh 'java ./Java8/jenkins/hello'
           }
         }
 
