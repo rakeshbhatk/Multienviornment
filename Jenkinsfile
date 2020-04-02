@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'master'
+    }
+
+  }
   stages {
     stage('Java8') {
       parallel {
@@ -34,6 +39,12 @@ javac ./jenkins/build.java
     stage('Java 7 Frontend test') {
       parallel {
         stage('Java 7 Front-end testing') {
+          agent {
+            node {
+              label 'master'
+            }
+
+          }
           steps {
             dir(path: 'Java8') {
               unstash 'Java8'
@@ -57,6 +68,12 @@ javac ./jenkins/build.java
 
             sh '''javac ./Java8/jenkins/build.java 
 '''
+          }
+        }
+
+        stage('Java 7 performance test') {
+          steps {
+            unstash 'Java8'
           }
         }
 
