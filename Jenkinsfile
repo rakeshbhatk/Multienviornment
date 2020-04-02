@@ -92,7 +92,5 @@ javac ./jenkins/build.java
     }
 
   }
-  parameters {
-    string(name: 'DEPLOY_TO', defaultValue: 'dev', description: '')
-  }
+ 
 }
