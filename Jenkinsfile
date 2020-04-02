@@ -90,8 +90,9 @@ javac ./jenkins/build.java
         input(message: 'Okay to Deploy to Staging?', ok: 'ok')
       }
     }
-parameters {
-    string(name: 'DEPLOY_TO', defaultValue: 'dev', description: '')
+
   }
+  parameters {
+    string(name: 'DEPLOY_TO', defaultValue: 'dev', description: '')
   }
 }
