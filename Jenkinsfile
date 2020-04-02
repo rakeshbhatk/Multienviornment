@@ -42,8 +42,7 @@ javac ./jenkins/build.java
           }
           steps {
             unstash 'Java8'
-            sh '''sh pwd
-sh pwd/Java8'''
+            sh 'cat Java8'
           }
         }
 
