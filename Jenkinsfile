@@ -40,6 +40,12 @@ javac ./jenkins/build.java
         }
 
         stage('Java 8 Front End') {
+          agent {
+            node {
+              label 'Java8'
+            }
+
+          }
           steps {
             pwd(tmp: true)
             unstash 'Java8'
