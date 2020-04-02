@@ -35,7 +35,11 @@ javac ./jenkins/build.java
       parallel {
         stage('Java 7 Front-end testing') {
           steps {
-            unstash 'Java8'
+            dir(path: 'Java8') {
+              unstash 'Java8'
+            }
+
+            sh 'ls'
           }
         }
 
