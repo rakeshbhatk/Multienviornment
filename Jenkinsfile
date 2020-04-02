@@ -47,7 +47,7 @@ javac ./jenkins/build.java
 
           }
           steps {
-            pwd(tmp: true)
+            dir(path: 'jenkins/')
             unstash 'Java8'
           }
         }
