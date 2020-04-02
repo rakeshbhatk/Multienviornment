@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Java8') {
       parallel {
-        stage('Java8') {
+        stage('Building in Java 8 ') {
           agent {
             node {
               label 'Java8'
@@ -26,8 +26,13 @@ javac ./jenkins/build.java
           }
         }
 
-        stage('Java7') {
-          agent any
+        stage('Building in Java 7') {
+          agent {
+            node {
+              label 'master'
+            }
+
+          }
           steps {
             sh 'echo "running on master building on java7"'
           }
