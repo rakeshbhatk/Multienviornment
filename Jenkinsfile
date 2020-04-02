@@ -80,7 +80,7 @@ javac ./jenkins/build.java
       }
     }
 
-    stage('') {
+    stage('Confirm Deploy') {
       steps {
         input(message: 'Okay to Deploy to Staging?', ok: 'ok')
       }
