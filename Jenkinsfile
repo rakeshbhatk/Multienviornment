@@ -31,23 +31,17 @@ javac ./jenkins/build.java
       }
     }
 
-    stage('Java 8 Frontend test') {
+    stage('Java 7 Frontend test') {
       parallel {
-        stage('Java 8 Frontend test') {
-          agent {
-            node {
-              label 'Java8'
-            }
-
-          }
+        stage('Java 7 Frontend test') {
           steps {
             unstash 'Java8'
-            sh 'ls -la'
           }
         }
 
-        stage('Java 7 Frontend test') {
+        stage('Java 8 Front End') {
           steps {
+            pwd(tmp: true)
             unstash 'Java8'
           }
         }
