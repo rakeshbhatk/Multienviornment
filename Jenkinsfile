@@ -43,6 +43,7 @@ javac ./jenkins/build.java
           steps {
             unstash 'Java8'
             sh 'ls'
+            junit '\'**/target/*.xml\' '
           }
         }
 
