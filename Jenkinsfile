@@ -80,5 +80,11 @@ javac ./jenkins/build.java
       }
     }
 
+    stage('') {
+      steps {
+        input(message: 'Okay to Deploy to Staging?', ok: 'ok')
+      }
+    }
+
   }
 }
