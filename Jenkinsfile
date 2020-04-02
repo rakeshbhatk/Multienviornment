@@ -33,13 +33,13 @@ javac ./jenkins/build.java
 
     stage('Java 7 Frontend test') {
       parallel {
-        stage('Java 7 Frontend test') {
+        stage('Java 7 Front-end testing') {
           steps {
             unstash 'Java8'
           }
         }
 
-        stage('Java 8 Front End') {
+        stage('Java 8 Front-end testing') {
           agent {
             node {
               label 'Java8'
@@ -51,6 +51,7 @@ javac ./jenkins/build.java
               unstash 'Java8'
             }
 
+            sh 'java /Java8/jenkins/hello'
           }
         }
 
