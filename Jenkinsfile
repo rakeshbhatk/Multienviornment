@@ -104,5 +104,17 @@ javac ./jenkins/build.java
       }
     }
 
+    stage('Deploy') {
+      agent {
+        node {
+          label 'master'
+        }
+
+      }
+      steps {
+        sh 'echo "Deployed successfully"'
+      }
+    }
+
   }
 }
