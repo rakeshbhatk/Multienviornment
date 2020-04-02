@@ -42,6 +42,8 @@ javac ./jenkins/build.java
           }
           steps {
             unstash 'Java8'
+            sh '''sh "ls -la ${pwd()}"
+sh "ls -la ${pwd()}/Java8"'''
           }
         }
 
