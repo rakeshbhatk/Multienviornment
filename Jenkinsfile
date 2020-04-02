@@ -16,7 +16,7 @@ sh ./jenkins/build.sh > Pipeline
 javac ./jenkins/build.java
 
 '''
-            stash(name: 'Java8', includes: './jenkins/*')
+            stash(name: 'Java8', includes: '/jenkins/*')
             archiveArtifacts 'Pipeline'
           }
         }
