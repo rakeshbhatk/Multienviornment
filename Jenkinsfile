@@ -52,7 +52,7 @@ javac ./jenkins/build.java
             }
 
             sh '''javac ./Java8/jenkins/build.java
-java  ./Java8/jenkins/hello'''
+java hello'''
           }
         }
 
